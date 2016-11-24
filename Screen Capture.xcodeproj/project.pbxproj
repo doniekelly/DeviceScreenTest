@@ -8,20 +8,54 @@
 
 /* Begin PBXBuildFile section */
 		7B05CABA1DE7185700DD7201 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B05CAB91DE7185700DD7201 /* AppDelegate.swift */; };
-		7B05CABC1DE7185700DD7201 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B05CABB1DE7185700DD7201 /* ViewController.swift */; };
+		7B05CABC1DE7185700DD7201 /* targetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B05CABB1DE7185700DD7201 /* targetViewController.swift */; };
 		7B05CABF1DE7185700DD7201 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B05CABD1DE7185700DD7201 /* Main.storyboard */; };
 		7B05CAC11DE7185700DD7201 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B05CAC01DE7185700DD7201 /* Assets.xcassets */; };
 		7B05CAC41DE7185700DD7201 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B05CAC21DE7185700DD7201 /* LaunchScreen.storyboard */; };
+		7B05CACD1DE718DF00DD7201 /* targetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B05CABB1DE7185700DD7201 /* targetViewController.swift */; };
+		7B05CACE1DE718DF00DD7201 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B05CAB91DE7185700DD7201 /* AppDelegate.swift */; };
+		7B05CAD11DE718DF00DD7201 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B05CAC21DE7185700DD7201 /* LaunchScreen.storyboard */; };
+		7B05CAD21DE718DF00DD7201 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B05CAC01DE7185700DD7201 /* Assets.xcassets */; };
+		7B05CAD31DE718DF00DD7201 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B05CABD1DE7185700DD7201 /* Main.storyboard */; };
+		7B05CADB1DE725A000DD7201 /* buddyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B05CADA1DE725A000DD7201 /* buddyViewController.swift */; };
+		7B05CADC1DE725A000DD7201 /* buddyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B05CADA1DE725A000DD7201 /* buddyViewController.swift */; };
+		7B05CADE1DE7260200DD7201 /* openingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B05CADD1DE7260200DD7201 /* openingViewController.swift */; };
+		7B05CADF1DE7260200DD7201 /* openingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B05CADD1DE7260200DD7201 /* openingViewController.swift */; };
+		7B05CAE81DE7457900DD7201 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B05CAE71DE7457900DD7201 /* libz.tbd */; };
+		7B05CAE91DE7458600DD7201 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B05CAE71DE7457900DD7201 /* libz.tbd */; };
+		7B05CAF31DE74A7500DD7201 /* ChirpSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B05CAF21DE74A7500DD7201 /* ChirpSDK.framework */; };
+		7B05CAF51DE7512800DD7201 /* ChirpSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B05CAF21DE74A7500DD7201 /* ChirpSDK.framework */; };
+		7B05CAF71DE76C2F00DD7201 /* CoreImageVideoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B05CAF61DE76C2F00DD7201 /* CoreImageVideoFilter.swift */; };
+		7B05CAF81DE76C2F00DD7201 /* CoreImageVideoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B05CAF61DE76C2F00DD7201 /* CoreImageVideoFilter.swift */; };
+		7B05CAFA1DE777F000DD7201 /* Screen1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B05CAF91DE777F000DD7201 /* Screen1ViewController.swift */; };
+		7B05CAFB1DE777F000DD7201 /* Screen1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B05CAF91DE777F000DD7201 /* Screen1ViewController.swift */; };
+		ADD8CEE2B515116455C8F970 /* libPods-Screen Capture.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C57A43CB4B967AD0DEDE22C /* libPods-Screen Capture.a */; };
+		FCFB2ADDEC78DC16C9232EDB /* libPods-Screen Capture client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08816D6D83A23108BDA98E32 /* libPods-Screen Capture client.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08816D6D83A23108BDA98E32 /* libPods-Screen Capture client.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Screen Capture client.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		361899A86C65142EF0FD351E /* Pods-Screen Capture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Screen Capture.release.xcconfig"; path = "Pods/Target Support Files/Pods-Screen Capture/Pods-Screen Capture.release.xcconfig"; sourceTree = "<group>"; };
+		69FF3B781F50C0DB4E1C26BC /* Pods-Screen Capture client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Screen Capture client.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Screen Capture client/Pods-Screen Capture client.debug.xcconfig"; sourceTree = "<group>"; };
 		7B05CAB61DE7185700DD7201 /* Screen Capture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Screen Capture.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B05CAB91DE7185700DD7201 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7B05CABB1DE7185700DD7201 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7B05CABB1DE7185700DD7201 /* targetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = targetViewController.swift; sourceTree = "<group>"; };
 		7B05CABE1DE7185700DD7201 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7B05CAC01DE7185700DD7201 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B05CAC31DE7185700DD7201 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B05CAC51DE7185700DD7201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B05CAD71DE718DF00DD7201 /* Screen Capture client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Screen Capture client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B05CAD81DE718DF00DD7201 /* Screen Capture copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Screen Capture copy-Info.plist"; path = "/Users/inhancetechnology/Documents/Screen Capture/Screen Capture copy-Info.plist"; sourceTree = "<absolute>"; };
+		7B05CADA1DE725A000DD7201 /* buddyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = buddyViewController.swift; sourceTree = "<group>"; };
+		7B05CADD1DE7260200DD7201 /* openingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = openingViewController.swift; sourceTree = "<group>"; };
+		7B05CAE71DE7457900DD7201 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		7B05CAF21DE74A7500DD7201 /* ChirpSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ChirpSDK.framework; sourceTree = "<group>"; };
+		7B05CAF41DE74B1C00DD7201 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		7B05CAF61DE76C2F00DD7201 /* CoreImageVideoFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreImageVideoFilter.swift; sourceTree = "<group>"; };
+		7B05CAF91DE777F000DD7201 /* Screen1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen1ViewController.swift; sourceTree = "<group>"; };
+		9C57A43CB4B967AD0DEDE22C /* libPods-Screen Capture.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Screen Capture.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B72DBF2E9CE682DE242CB88A /* Pods-Screen Capture client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Screen Capture client.release.xcconfig"; path = "Pods/Target Support Files/Pods-Screen Capture client/Pods-Screen Capture client.release.xcconfig"; sourceTree = "<group>"; };
+		FF0FEEC4A601ED383195B445 /* Pods-Screen Capture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Screen Capture.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Screen Capture/Pods-Screen Capture.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +63,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B05CAF31DE74A7500DD7201 /* ChirpSDK.framework in Frameworks */,
+				7B05CAE91DE7458600DD7201 /* libz.tbd in Frameworks */,
+				ADD8CEE2B515116455C8F970 /* libPods-Screen Capture.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B05CACF1DE718DF00DD7201 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B05CAE81DE7457900DD7201 /* libz.tbd in Frameworks */,
+				FCFB2ADDEC78DC16C9232EDB /* libPods-Screen Capture client.a in Frameworks */,
+				7B05CAF51DE7512800DD7201 /* ChirpSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,7 +86,10 @@
 			isa = PBXGroup;
 			children = (
 				7B05CAB81DE7185700DD7201 /* Screen Capture */,
+				7B05CAE01DE7280B00DD7201 /* misc */,
 				7B05CAB71DE7185700DD7201 /* Products */,
+				926823CC150AC511D478DF78 /* Pods */,
+				FAE98CA9ECE104E09E01762C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -47,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				7B05CAB61DE7185700DD7201 /* Screen Capture.app */,
+				7B05CAD71DE718DF00DD7201 /* Screen Capture client.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,14 +105,50 @@
 		7B05CAB81DE7185700DD7201 /* Screen Capture */ = {
 			isa = PBXGroup;
 			children = (
-				7B05CAB91DE7185700DD7201 /* AppDelegate.swift */,
-				7B05CABB1DE7185700DD7201 /* ViewController.swift */,
+				7B05CADD1DE7260200DD7201 /* openingViewController.swift */,
+				7B05CABB1DE7185700DD7201 /* targetViewController.swift */,
+				7B05CADA1DE725A000DD7201 /* buddyViewController.swift */,
+				7B05CAF61DE76C2F00DD7201 /* CoreImageVideoFilter.swift */,
 				7B05CABD1DE7185700DD7201 /* Main.storyboard */,
+				7B05CAF91DE777F000DD7201 /* Screen1ViewController.swift */,
+			);
+			path = "Screen Capture";
+			sourceTree = "<group>";
+		};
+		7B05CAE01DE7280B00DD7201 /* misc */ = {
+			isa = PBXGroup;
+			children = (
+				7B05CAF41DE74B1C00DD7201 /* Bridging-Header.h */,
+				7B05CAB91DE7185700DD7201 /* AppDelegate.swift */,
 				7B05CAC01DE7185700DD7201 /* Assets.xcassets */,
 				7B05CAC21DE7185700DD7201 /* LaunchScreen.storyboard */,
 				7B05CAC51DE7185700DD7201 /* Info.plist */,
+				7B05CAD81DE718DF00DD7201 /* Screen Capture copy-Info.plist */,
 			);
+			name = misc;
 			path = "Screen Capture";
+			sourceTree = "<group>";
+		};
+		926823CC150AC511D478DF78 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF0FEEC4A601ED383195B445 /* Pods-Screen Capture.debug.xcconfig */,
+				361899A86C65142EF0FD351E /* Pods-Screen Capture.release.xcconfig */,
+				69FF3B781F50C0DB4E1C26BC /* Pods-Screen Capture client.debug.xcconfig */,
+				B72DBF2E9CE682DE242CB88A /* Pods-Screen Capture client.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FAE98CA9ECE104E09E01762C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B05CAF21DE74A7500DD7201 /* ChirpSDK.framework */,
+				7B05CAE71DE7457900DD7201 /* libz.tbd */,
+				9C57A43CB4B967AD0DEDE22C /* libPods-Screen Capture.a */,
+				08816D6D83A23108BDA98E32 /* libPods-Screen Capture client.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +158,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B05CAC81DE7185700DD7201 /* Build configuration list for PBXNativeTarget "Screen Capture" */;
 			buildPhases = (
+				2A4F40294BA1C36C4876DBA7 /* [CP] Check Pods Manifest.lock */,
 				7B05CAB21DE7185700DD7201 /* Sources */,
 				7B05CAB31DE7185700DD7201 /* Frameworks */,
 				7B05CAB41DE7185700DD7201 /* Resources */,
+				895A103FC689EE2496ACA16E /* [CP] Embed Pods Frameworks */,
+				4DC6BDB8A45BCE8CCD88F370 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -82,6 +172,26 @@
 			name = "Screen Capture";
 			productName = "Screen Capture";
 			productReference = 7B05CAB61DE7185700DD7201 /* Screen Capture.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7B05CACB1DE718DF00DD7201 /* Screen Capture client */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B05CAD41DE718DF00DD7201 /* Build configuration list for PBXNativeTarget "Screen Capture client" */;
+			buildPhases = (
+				0CBE588C91223A7F7152ADD9 /* [CP] Check Pods Manifest.lock */,
+				7B05CACC1DE718DF00DD7201 /* Sources */,
+				7B05CACF1DE718DF00DD7201 /* Frameworks */,
+				7B05CAD01DE718DF00DD7201 /* Resources */,
+				DF60436933255A382DABB5C6 /* [CP] Embed Pods Frameworks */,
+				D6305C3FEF7FCF8C3260603F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Screen Capture client";
+			productName = "Screen Capture";
+			productReference = 7B05CAD71DE718DF00DD7201 /* Screen Capture client.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -99,6 +209,9 @@
 						DevelopmentTeam = H5A43L6864;
 						ProvisioningStyle = Automatic;
 					};
+					7B05CACB1DE718DF00DD7201 = {
+						DevelopmentTeam = H5A43L6864;
+					};
 				};
 			};
 			buildConfigurationList = 7B05CAB11DE7185700DD7201 /* Build configuration list for PBXProject "Screen Capture" */;
@@ -115,6 +228,7 @@
 			projectRoot = "";
 			targets = (
 				7B05CAB51DE7185700DD7201 /* Screen Capture */,
+				7B05CACB1DE718DF00DD7201 /* Screen Capture client */,
 			);
 		};
 /* End PBXProject section */
@@ -130,15 +244,135 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7B05CAD01DE718DF00DD7201 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B05CAD11DE718DF00DD7201 /* LaunchScreen.storyboard in Resources */,
+				7B05CAD21DE718DF00DD7201 /* Assets.xcassets in Resources */,
+				7B05CAD31DE718DF00DD7201 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0CBE588C91223A7F7152ADD9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2A4F40294BA1C36C4876DBA7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4DC6BDB8A45BCE8CCD88F370 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Screen Capture/Pods-Screen Capture-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		895A103FC689EE2496ACA16E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Screen Capture/Pods-Screen Capture-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6305C3FEF7FCF8C3260603F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Screen Capture client/Pods-Screen Capture client-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF60436933255A382DABB5C6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Screen Capture client/Pods-Screen Capture client-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7B05CAB21DE7185700DD7201 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B05CABC1DE7185700DD7201 /* ViewController.swift in Sources */,
+				7B05CABC1DE7185700DD7201 /* targetViewController.swift in Sources */,
+				7B05CAF71DE76C2F00DD7201 /* CoreImageVideoFilter.swift in Sources */,
+				7B05CADE1DE7260200DD7201 /* openingViewController.swift in Sources */,
+				7B05CADB1DE725A000DD7201 /* buddyViewController.swift in Sources */,
+				7B05CAFA1DE777F000DD7201 /* Screen1ViewController.swift in Sources */,
 				7B05CABA1DE7185700DD7201 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B05CACC1DE718DF00DD7201 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B05CACD1DE718DF00DD7201 /* targetViewController.swift in Sources */,
+				7B05CAF81DE76C2F00DD7201 /* CoreImageVideoFilter.swift in Sources */,
+				7B05CADF1DE7260200DD7201 /* openingViewController.swift in Sources */,
+				7B05CADC1DE725A000DD7201 /* buddyViewController.swift in Sources */,
+				7B05CAFB1DE777F000DD7201 /* Screen1ViewController.swift in Sources */,
+				7B05CACE1DE718DF00DD7201 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,7 +438,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -247,7 +481,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -257,26 +491,82 @@
 		};
 		7B05CAC91DE7185700DD7201 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF0FEEC4A601ED383195B445 /* Pods-Screen Capture.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = H5A43L6864;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Screen Capture/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "ie.inhance..Screen-Capture";
+				PRODUCT_BUNDLE_IDENTIFIER = "ie.inhance.Screen-Capture";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Screen Capture/Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		7B05CACA1DE7185700DD7201 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 361899A86C65142EF0FD351E /* Pods-Screen Capture.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = H5A43L6864;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Screen Capture/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ie.inhance.Screen-Capture";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Screen Capture/Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		7B05CAD51DE718DF00DD7201 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69FF3B781F50C0DB4E1C26BC /* Pods-Screen Capture client.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = NO;
+				DEVELOPMENT_TEAM = H5A43L6864;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "Screen Capture copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-DCLIENT";
 				PRODUCT_BUNDLE_IDENTIFIER = "ie.inhance..Screen-Capture";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Screen Capture/Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		7B05CAD61DE718DF00DD7201 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B72DBF2E9CE682DE242CB88A /* Pods-Screen Capture client.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = NO;
+				DEVELOPMENT_TEAM = H5A43L6864;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "Screen Capture copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-DCLIENT";
+				PRODUCT_BUNDLE_IDENTIFIER = "ie.inhance..Screen-Capture";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Screen Capture/Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -300,6 +590,16 @@
 				7B05CACA1DE7185700DD7201 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B05CAD41DE718DF00DD7201 /* Build configuration list for PBXNativeTarget "Screen Capture client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B05CAD51DE718DF00DD7201 /* Debug */,
+				7B05CAD61DE718DF00DD7201 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

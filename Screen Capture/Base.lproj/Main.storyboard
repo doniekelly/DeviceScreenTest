@@ -1,14 +1,43 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zF7-Rm-SGi">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Opening View Controller-->
+        <scene sceneID="nKB-GW-THf">
+            <objects>
+                <viewController id="zF7-Rm-SGi" customClass="openingViewController" customModule="Screen_Capture" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Qq-ig-gVl"/>
+                        <viewControllerLayoutGuide type="bottom" id="AVI-kj-hC0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Drp-Cz-Gra">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="QdG-Hm-mgR" kind="show" identifier="showClient" animates="NO" id="qvi-N2-NWP"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="showTarget" animates="NO" id="7LJ-Bq-NAJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sc9-3Y-DRV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-442" y="526"/>
+        </scene>
+        <!--Target View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="targetViewController" customModule="Screen_Capture" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +45,81 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s2m-ee-sLp">
+                                <rect key="frame" x="43" y="189.5" width="288" height="288"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="s2m-ee-sLp" secondAttribute="height" multiplier="1:1" id="wRn-Fc-kdk"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="s2m-ee-sLp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9BZ-Fn-dEE"/>
+                            <constraint firstAttribute="width" secondItem="s2m-ee-sLp" secondAttribute="width" multiplier="1.3" id="b6e-10-Keu"/>
+                            <constraint firstItem="s2m-ee-sLp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cg7-T7-u9M"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="qrCode" destination="s2m-ee-sLp" id="Joi-sk-uZ3"/>
+                        <segue destination="hT4-xa-pPv" kind="show" identifier="screen1" id="LEo-TF-jab"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="374" y="162"/>
+        </scene>
+        <!--Screen1 View Controller-->
+        <scene sceneID="bEa-ly-5xZ">
+            <objects>
+                <viewController id="hT4-xa-pPv" customClass="Screen1ViewController" customModule="Screen_Capture" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zKP-vw-pIN"/>
+                        <viewControllerLayoutGuide type="bottom" id="QkX-o4-GrJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uZE-VU-kKD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yXN-Oh-TIf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1222" y="161"/>
+        </scene>
+        <!--Buddy View Controller-->
+        <scene sceneID="7ue-9I-JG1">
+            <objects>
+                <viewController id="QdG-Hm-mgR" customClass="buddyViewController" customModule="Screen_Capture" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iwL-0G-mLq"/>
+                        <viewControllerLayoutGuide type="bottom" id="IwV-Re-qSX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5bO-Gl-SeE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan Target Device" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9gU-Ki-MFM">
+                                <rect key="frame" x="16" y="58" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9gU-Ki-MFM" firstAttribute="leading" secondItem="5bO-Gl-SeE" secondAttribute="leadingMargin" id="Mfl-u2-g8p"/>
+                            <constraint firstItem="9gU-Ki-MFM" firstAttribute="top" secondItem="iwL-0G-mLq" secondAttribute="bottom" constant="38" id="cbl-nX-lgc"/>
+                            <constraint firstItem="9gU-Ki-MFM" firstAttribute="trailing" secondItem="5bO-Gl-SeE" secondAttribute="trailingMargin" id="cgZ-eT-c7Y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="qrDecodeLabel" destination="9gU-Ki-MFM" id="6eF-XR-WCX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hp4-al-yE9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="373.60000000000002" y="904.49775112443785"/>
         </scene>
     </scenes>
 </document>
