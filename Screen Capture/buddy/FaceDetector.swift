@@ -21,7 +21,7 @@ class FaceDetector {
         options = [String : AnyObject]()
         options![CIDetectorAccuracy] = CIDetectorAccuracyLow as AnyObject?
         
-        detector = CIDetector(ofType: CIDetectorTypeFace, context: context!, options: options!)
+        detector = CIDetector(ofType: CIDetectorTypeQRCode, context: context!, options: options!)
     }
     
     func getFacialFeaturesFromImage(_ image: CIImage, options: [String : AnyObject]) -> [CIFeature] {

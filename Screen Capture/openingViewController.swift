@@ -13,18 +13,18 @@ class openingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         ChirpSDK.sharedSDK().setAppKey("oea5PoKMIBDLdCS0odHNezUvR", andSecret: "KK4tDFffcNqIwu03aWg47WmGUWrf21iRhzEX3cYQEW96PDTXqR", withCompletion: {authenticated, error in
           
             if(authenticated) {
                 print("Chirp Authenticated");
-                ChirpSDK.sharedSDK().setProtocolNamed(ChirpProtocolNameUltrasonic)
                 
             }
             else {
                 print(ChirpSDK.sharedSDK().version());
             }
         })
+        
+        ChirpSDK.sharedSDK().setProtocolNamed(ChirpProtocolNameUltrasonic)
     }
     
     override func viewDidAppear(_ animated: Bool) {

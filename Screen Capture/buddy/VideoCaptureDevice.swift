@@ -15,13 +15,15 @@ class VideoCaptureDevice {
         var device: AVCaptureDevice?
         
         AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo).forEach { videoDevice in
-            if ((videoDevice as AnyObject).position == AVCaptureDevicePosition.front) {
+            if ((videoDevice as AnyObject).position == AVCaptureDevicePosition.back) {
                 device = videoDevice as? AVCaptureDevice
             }
         }
         
         if (nil == device) {
             device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
+//            device?.focusMode = AVCaptureFocusMode.locked
+            device?.autoFocusRangeRestriction = AVCaptureAutoFocusRangeRestriction.near
         }
         
         return device!

@@ -13,8 +13,4 @@ class Screen1ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
 }

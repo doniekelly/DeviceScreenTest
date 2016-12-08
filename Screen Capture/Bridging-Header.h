@@ -7,3 +7,5 @@
 //
 
 #import <ChirpSDK/ChirpSDK.h>
+#import <ios-qr-encoder/UIImage+MDQRCode.h>
+

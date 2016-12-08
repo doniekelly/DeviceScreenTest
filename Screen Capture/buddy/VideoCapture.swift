@@ -39,8 +39,8 @@ class VideoCapture: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
     }
     
     fileprivate func setSessionPreset() throws {
-        if (session!.canSetSessionPreset(AVCaptureSessionPreset640x480)) {
-            session!.sessionPreset = AVCaptureSessionPreset640x480
+        if (session!.canSetSessionPreset(AVCaptureSessionPresetPhoto)) {
+            session!.sessionPreset = AVCaptureSessionPresetPhoto
         }
         else {
             throw VideoCaptureError.sessionPresetNotAvailable
@@ -120,7 +120,7 @@ class VideoCapture: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
     fileprivate func getFacialFeaturesFromImage(_ image: CIImage) -> [CIFeature] {
         let imageOptions = [CIDetectorImageOrientation : 6]
         
-        return self.faceDetector!.getFacialFeaturesFromImage(image, options: imageOptions)
+        return self.faceDetector!.getFacialFeaturesFromImage(image, options: imageOptions as [String : AnyObject])
     }
     
     fileprivate func transformFacialFeaturePosition(_ xPosition: CGFloat, yPosition: CGFloat, videoRect: CGRect, previewRect: CGRect, isMirrored: Bool) -> CGRect {
@@ -182,17 +182,17 @@ class VideoCapture: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
         }
         
         for feature in features {
-            let faceFeature = feature as? CIFaceFeature
+            let faceFeature = feature as? CIRectangleFeature
             
-            if (faceFeature!.hasLeftEyePosition) {
-                
-                addEyeViewToPreview(faceFeature!.leftEyePosition.x, yPosition: faceFeature!.leftEyePosition.y, cleanAperture: cleanAperture)
-            }
-            
-            if (faceFeature!.hasRightEyePosition) {
-                
-                addEyeViewToPreview(faceFeature!.rightEyePosition.x, yPosition: faceFeature!.rightEyePosition.y, cleanAperture: cleanAperture)
-            }
+//            if (faceFeature!.hasLeftEyePosition) {
+//                
+//                addEyeViewToPreview(faceFeature!.leftEyePosition.x, yPosition: faceFeature!.leftEyePosition.y, cleanAperture: cleanAperture)
+//            }
+//            
+//            if (faceFeature!.hasRightEyePosition) {
+//                
+//                addEyeViewToPreview(faceFeature!.rightEyePosition.x, yPosition: faceFeature!.rightEyePosition.y, cleanAperture: cleanAperture)
+//            }
             
         }
         

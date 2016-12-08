@@ -23,14 +23,15 @@ import QuartzCore
 
 class CoreImageVideoFilter: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
   
-  var applyFilter: ((CIImage) -> CIImage?)?
-  var videoDisplayView: GLKView!
-  var videoDisplayViewBounds: CGRect!
-  var renderContext: CIContext!
-  
-  var avSession: AVCaptureSession?
-  var sessionQueue: DispatchQueue!
-  
+    var applyFilter: ((CIImage) -> CIImage?)?
+    var videoDisplayView: GLKView!
+    var videoDisplayViewBounds: CGRect!
+    var renderContext: CIContext!
+    private var stillImageOutput: AVCaptureStillImageOutput!
+    var avSession: AVCaptureSession?
+    var sessionQueue: DispatchQueue!
+    var device:AVCaptureDevice? = nil
+    
   var detector: CIDetector?
   
   init(superview: UIView, applyFilterCallback: ((CIImage) -> CIImage?)?) {
@@ -48,18 +49,70 @@ class CoreImageVideoFilter: NSObject, AVCaptureVideoDataOutputSampleBufferDelega
     videoDisplayViewBounds = CGRect(x: 0, y: 0, width: videoDisplayView.drawableWidth, height: videoDisplayView.drawableHeight)
   }
   
-  deinit {
-    stopFiltering()
-  }
+    deinit {
+        stopFiltering()
+    }
   
-  func startFiltering() {
+    func takePhoto() {
+        
+        if let videoConnection = stillImageOutput.connection(withMediaType: AVMediaTypeVideo) {
+            stillImageOutput.captureStillImageAsynchronously(from: videoConnection) {
+                (imageDataSampleBuffer, error) -> Void in
+                
+                if(!(error != nil))
+                {
+                    let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataSampleBuffer)
+                    UIImageWriteToSavedPhotosAlbum(UIImage(data: imageData!)!, nil, nil, nil)
+                    
+                }
+                else {
+                    self.takePhoto()
+                }
+            }
+        }
+        
+    }
+
+    func startFiltering() {
     // Create a session if we don't already have one
     if avSession == nil {
       avSession = createAVSession()
+        
+    
+        
+        // Set the focus and exposure
+        do {
+            try device?.lockForConfiguration()
+//            avSession?.beginConfiguration()
+            
+            device?.focusPointOfInterest = CGPoint(x: 0.5, y: 0.5)
+            device?.exposurePointOfInterest = CGPoint(x: 0.5, y: 0.5)
+            
+            self.device?.focusMode = AVCaptureFocusMode.locked
+            device?.setFocusModeLockedWithLensPosition(0.3, completionHandler: { time in
+                
+                self.device?.exposureMode = AVCaptureExposureMode.custom
+//                let minExposure = self.device?.activeFormat.minExposureDuration
+//                let maxExposure = self.device?.activeFormat.maxExposureDuration
+                
+                let minISO = self.device?.activeFormat.minISO
+                self.device?.setExposureModeCustomWithDuration(CMTimeMakeWithSeconds( 0.02, 1000*1000*1000 ), iso: minISO!, completionHandler: { time in
+                    
+                    
+                    self.device?.unlockForConfiguration()
+                })
+//                self.device?.setExposureTargetBias(0.1, completionHandler: { time in
+//                    
+////                    self.device?.unlockForConfiguration()
+////                    self.avSession?.commitConfiguration()
+//                    
+//                })
+            })
+        } catch {}
     }
     
     // And kick it off
-    avSession?.startRunning()
+    self.avSession?.startRunning()
   }
   
   func stopFiltering() {
@@ -69,7 +122,7 @@ class CoreImageVideoFilter: NSObject, AVCaptureVideoDataOutputSampleBufferDelega
   
   func createAVSession() -> AVCaptureSession {
     // Input from video camera
-    var device:AVCaptureDevice? = nil
+    
     var input:AVCaptureDeviceInput? = nil
     
     do {
@@ -81,7 +134,7 @@ class CoreImageVideoFilter: NSObject, AVCaptureVideoDataOutputSampleBufferDelega
     
     // Start out with low quality
     let session = AVCaptureSession()
-    session.sessionPreset = AVCaptureSessionPresetMedium
+    session.sessionPreset = AVCaptureSessionPresetPhoto
     
     // Output
     let videoOutput = AVCaptureVideoDataOutput()
@@ -90,16 +143,16 @@ class CoreImageVideoFilter: NSObject, AVCaptureVideoDataOutputSampleBufferDelega
     videoOutput.alwaysDiscardsLateVideoFrames = true
     videoOutput.setSampleBufferDelegate(self, queue: sessionQueue)
     
+    stillImageOutput = AVCaptureStillImageOutput()
+    stillImageOutput.outputSettings = [AVVideoCodecKey: AVVideoCodecJPEG]
+    session.addOutput(stillImageOutput)
+    
     // Join it all together
     session.addInput(input)
     session.addOutput(videoOutput)
-
     return session
   }
-  
 
-  
-  //MARK: <AVCaptureVideoDataOutputSampleBufferDelegate
   func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
     
     // Need to shimmy this through type-hell
